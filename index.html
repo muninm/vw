@@ -36,7 +36,7 @@
 
 </head>
 
-<body id="page-top" class="index">
+<body id="page-top" class="index" onload="redirect()">
 
     <!-- Navigation -->
     <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
@@ -58,7 +58,7 @@
                         <a class="page-scroll" href="#servicios">Financiación</a>
                     </li>
                       <li>
-                        <a class="page-scroll" href="#novedades">Modelos</a>
+                        <a class="page-scroll" href="#modelos">Modelos</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#contact">Contacto</a>
@@ -100,8 +100,8 @@
     </section>
 
 
-    <!-- novedades Grid Section -->
-    <section id="novedades" >
+    <!-- modelos Grid Section -->
+    <section id="modelos" >
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -399,7 +399,17 @@
         <!--Carrousel -->
    <script type="text/javascript" src="vendor/slick/slick.min.js"></script>
    <script src="js/rise.js"></script>
-
+   <script>
+    function redirect(){
+         var vars = {};
+          window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+            vars[key] = value;
+        });
+         if(vars["redirect"]!=null){
+            window.location.href ='#'+vars["redirect"];
+         }
+    }
+   </script>
 </body>
 
 </html>
