@@ -10,7 +10,7 @@
     <meta name="author" content="">
 
     <title>Volkswagen</title>
-    <base href="/"> 
+
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet">
 
@@ -405,8 +405,9 @@
           window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
             vars[key] = value;
         });
-         if(vars["redirect"]!=null){
-            window.location.href ='#'+vars["redirect"];
+         if(vars['redirect']!=null){
+            alert(vars['redirect'])
+            window.location.href ='#'+vars['redirect'];
          }
     }
    </script>
