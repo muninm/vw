@@ -405,6 +405,8 @@
           window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
             vars[key] = value;
         });
+        alert(vars['redirect'])
+
          if(vars['redirect']!=null){
             alert(vars['redirect'])
             window.location.href ='#'+vars['redirect'];
